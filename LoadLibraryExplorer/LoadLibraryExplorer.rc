@@ -1,0 +1,498 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\LoadLibraryExplorer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\LoadLibraryExplorer.ico"
+IDI_JMN                 ICON                    "res\\jmnco.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About LoadLibraryExplorer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,4,21,20
+    LTEXT           "LoadLibraryExplorer Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright© 2006, Joseph M. Newcomer, All Rights Reserved",
+                    IDC_STATIC,40,25,187,23
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+    ICON            IDI_JMN,IDC_STATIC,9,34,20,20
+END
+
+IDD_LOADLIBRARYEXPLORER_DIALOG DIALOGEX 0, 0, 666, 488
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "LoadLibrary Explorer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Load Method",IDC_LOAD_METHOD_CAPTION,13,131,180,84
+    CONTROL         "LoadLibrary",IDC_USE_LOADLIBRARY,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,24,148,96,10
+    CONTROL         "LoadLibraryEx",IDC_USE_LOADLIBRARYEX,"Button",
+                    BS_AUTORADIOBUTTON,24,163,96,10
+    CONTROL         "ShellExecute this app",IDC_USE_SHELLEXECUTE,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_DISABLED,24,188,
+                    96,10
+    CONTROL         "LOAD_WITH_ALTERED_SEARCH_PATH",
+                    IDC_LOAD_WITH_ALTERED_SEARCH_PATH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,41,175,141,10
+    GROUPBOX        "DLL Locations",IDC_DLL_LOCATIONS_CAPTION,200,4,466,243
+    CONTROL         "(System32)",IDC_SYSTEM32,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,385,24,273,10
+    CONTROL         "(windows)",IDC_WINDOWS,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,385,38,273,10
+    CONTROL         "(16-bit system)",IDC_SYSTEM,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,385,52,273,10
+    CONTROL         "(Working)",IDC_WORKING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,385,66,273,10
+    CONTROL         "(App Path)",IDC_APP_PATH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,385,80,273,10
+    CONTROL         "(Executable)",IDC_EXECUTABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,385,94,273,10
+    CONTROL         "(Alternate)",IDC_ALTERNATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,385,108,273,10
+    CHECKBOX        "(.local)",IDC_LOCAL_REDIRECT,385,122,273,10
+    GROUPBOX        "Force Explicit Path",IDC_STATIC,205,16,112,138
+    CONTROL         "(System32)",IDC_FORCE_SYSTEM32,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,259,24,53,10,WS_EX_RIGHT
+    CONTROL         "(Windows)",IDC_FORCE_WINDOWS,"Button",
+                    BS_AUTORADIOBUTTON,262,38,50,10,WS_EX_RIGHT
+    CONTROL         "(16-bit Windows)",IDC_FORCE_SYSTEM,"Button",
+                    BS_AUTORADIOBUTTON,241,52,71,10,WS_EX_RIGHT
+    CONTROL         "(Working)",IDC_FORCE_WORKING,"Button",
+                    BS_AUTORADIOBUTTON,265,66,47,10,WS_EX_RIGHT
+    CONTROL         "(App Path)",IDC_FORCE_APP_PATH,"Button",
+                    BS_AUTORADIOBUTTON,261,80,51,10,WS_EX_RIGHT
+    CONTROL         "(Executable)",IDC_FORCE_EXECUTABLE,"Button",
+                    BS_AUTORADIOBUTTON,255,94,57,10,WS_EX_RIGHT
+    CONTROL         "(Alternate)",IDC_FORCE_ALTERNATE,"Button",
+                    BS_AUTORADIOBUTTON,261,108,51,10,WS_EX_RIGHT
+    CONTROL         "Use Explicit Path Above",IDC_FORCE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,221,136,91,10,
+                    WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATE_SYSTEM32,323,24,54,12,0,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_STATE_WINDOWS,323,38,54,12,0,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_STATE_SYSTEM,323,52,54,12,0,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_STATE_WORKING,323,66,54,12,0,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_STATE_APP_PATH,323,80,54,12,0,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_STATE_EXECUTABLE,323,94,54,12,0,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_STATE_ALTERNATE,323,108,54,12,0,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_STATE_LOCAL,323,122,54,12,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Load",IDC_LOAD,323,138,54,14
+    GROUPBOX        "DLL Selection",IDC_DIALOG_SELECTION_CAPTION,205,159,437,
+                    52
+    CONTROL         "(Internal DLL)",IDC_USE_THE_DLL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,217,169,146,
+                    10
+    CONTROL         "&Known DLL",IDC_KNOWN_DLL,"Button",BS_AUTORADIOBUTTON,
+                    217,188,74,10
+    LTEXT           "Static",IDC_DLL_DIRECTORY,299,186,152,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_KNOWN_DLLS,457,186,177,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Redirection",IDC_REDIRECT_CAPTION,205,215,279,22
+    CONTROL         "None",IDC_REDIRECT_NONE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,255,223,33,10
+    CONTROL         "Executable directory",IDC_REDIRECT_EXECUTABLE,"Button",
+                    BS_AUTORADIOBUTTON,303,223,82,10
+    CONTROL         ".local directory",IDC_REDIRECT_LOCAL,"Button",
+                    BS_AUTORADIOBUTTON,409,223,63,10
+    LTEXT           "Load Request",IDC_STATIC,7,245,45,8
+    EDITTEXT        IDC_LOADLIBRARY,0,258,665,16,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Library Path Loaded",IDC_STATIC,7,281,65,8
+    EDITTEXT        IDC_LIBRRARY,0,293,665,16,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "PATH=",IDC_STATIC,7,313,24,8
+    LISTBOX         IDC_PATH,0,326,665,57,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         IDC_LOG,0,391,665,96,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "SafeDllSearchMode",IDC_STATIC,13,4,178,101
+    CONTROL         "Force specific setting",
+                    IDC_USE_SELECTED_SAFEDLLSEARCHMODE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,24,35,83,10
+    CONTROL         "Use default setting",IDC_USE_DEFAULT_SEARCH_MODE,"Button",
+                    BS_AUTORADIOBUTTON,24,67,77,10
+    CONTROL         "Desired SafeDllSearchMode",
+                    IDC_DESIRED_SAFEDLLSEARCHMODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,76,48,103,10
+    CHECKBOX        "",IDC_DEFAULT_SAFE_DLL_SEARCH_MODE,125,67,8,8
+    PUSHBUTTON      "EnumProcessModules",IDC_ENUM,13,222,108,14
+    CONTROL         "Alphabetical",IDC_ALPHABETICAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,128,221,55,14
+    LTEXT           "Static",IDC_MESSAGE,196,276,266,14,SS_CENTERIMAGE,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Re-Launch LoadLibraryExplorer",IDC_RELAUNCH,464,277,122,
+                    14
+    CONTROL         "",IDC_MINFRAME,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,
+                    0,0,665,430
+    CONTROL         "Test SafeSllSearchMode",IDC_TEST_SAFE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,28,19,93,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "FlounderCraft Ltd."
+            VALUE "FileDescription", "LoadLibrary Explorer"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "LoadLibraryExplorer.exe"
+            VALUE "LegalCopyright", "© FlounderCraft Ltd.  All rights reserved."
+            VALUE "OriginalFilename", "LoadLibraryExplorer.exe"
+            VALUE "ProductName", "LoadLibrary Explorer"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_LOADLIBRARYEXPLORER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 665
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 470
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DLL
+//
+
+#if defined(APSTUDIO_INVOKED) || defined(_DEBUG)
+#if defined(APSTUDIO_INVOKED)
+IDR_DLL$(_DEBUG)        DLL                     "..\\TheDLL\\Debug\\theDLL.dll"
+#else
+IDR_DLL                 DLL                     "..\\TheDLL\\Debug\\theDLL.dll"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(NDEBUG)
+#if defined(APSTUDIO_INVOKED)
+IDR_DLL$(NDEBUG)        DLL                     "..\\TheDLL\\Release\\theDLL.Dll"
+#else
+IDR_DLL                 DLL                     "..\\TheDLL\\Release\\theDLL.Dll"
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About LoadLibrary Explorer..."
+    IDS_TRACELOG_UNKNOWN_ERROR "Unkonwn error %d (0x%08x)"
+    IDS_UNKNOWN_ERROR       "Unknown error %d (0x%08x)"
+    IDS_TRACELOG_FILTER     "Log files (*.log)|*.log|All files (*.*)|*.*|"
+    IDS_TRACELOG_DELETED_ENTRIES "%d entries have been deleted from log"
+    IDS_TRACELOG_FILE_SAVE  "Save Trace Log"
+    IDS_TRACELOG_FILE_SAVE_AS "Save Trace Log As"
+    IDS_TRACELOG_FILE_OPEN_FAILED "Trace Log file open failed"
+    IDS_CREATED_DIRECTORY   "Created subdirectory ""%s"""
+    IDS_DIRECTORY_EXISTS    "Subdirectory ""%s"" already exists"
+    IDS_DIRECTORY_ERROR     "Error creating subdirectory ""%s"""
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROGRAM_ROOT        "Software\\FlounderCraft\\LoadLibraryExplorer"
+    IDS_REGISTRY_SYSTEM32   "System32"
+    IDS_REGISTRY_WINDOWS    "Windows"
+    IDS_REGISTRY_WORKING    "Working directory"
+    IDS_CD_FAILED           "Attempt to set working directory ""%s"" failed"
+    IDS_CD_WORKED           "Current Working Directory is ""%s"""
+    IDS_REGISTRY_APP_PATH   "App Path"
+    IDS_REGISTRY_SAFEDLLSEARCHMODE_HKLM 
+                            "\\System\\CurrentControlSet\\Control\\Session Manager\\SafeDllSearchMode"
+    IDS_CANT_STORE_SAFEDLLSEARCHMODE 
+                            "Insufficient privileges to change SafeDllSearchMode"
+    IDS_APP_PATH            "\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths"
+    IDS_GETDLLNAME_FAILED   "GetDllName failed"
+    IDS_GETPROCADDRESS_FAILED "GetProcAddress failed"
+    IDS_LOAD_FAILED         "Failed to load ""%s"""
+    IDS_GETDLLNAME_WORKD    "Successfully loaded ""%s"""
+    IDS_SHELLEXECUTE_NOT_IMPLEMENTED "ShellExecute option not yet implemented"
+    IDS_GETDLLNAME_WORKED   "GetDLLName worked, returned ""%s"""
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DELETED_DLL         "Deleted ""%s"""
+    IDS_DELETE_FAILED       "Delete failed for ""%s"""
+    IDS_STARS               "*************************************************************************************************************"
+    IDS_NO_SOURCE_DLL       "Source DLL prototype missing ""%s"""
+    IDS_DLL_SAME            "Target ""%s"" already installed"
+    IDS_QUERY_TARGET_FAILED "Failed to get FILETIME of target ""%s"""
+    IDS_SET_TARGET_FAILED   "Unable to set consistent file time for ""%s"""
+    IDS_COPY_TARGET_FAILED  "CopyFile(""%s"". ""%s"". FALSE) failed"
+    IDS_REGISTRY_EXECUTABLE "Executable"
+    IDS_REGISTRY_ALTERNATE  "Alternate"
+    IDS_DELETE_NOT_NEEDED   "File ""%s"" already deleted"
+    IDS_REGISTRY_FORCE_SELECTION "ForceSelection"
+    IDS_REGISTRY_FORCE      "Force"
+    IDS_PATH_SET            "PATH=""%s"""
+    IDS_REGISTRY_USE_SAFEDLLSEARCHMODE "SafeDllSearchMode\\Desired"
+    IDS_REGISTRY_USE_SAFEDLLSEARCHMODE_SETTING "SafeDllSearchMode\\Selection"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_EXECUTABLE          "The executable directory"
+    IDC_SYSTEM              "The 16-bit Windows system directory"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_SYSTEM32            "The 32-bit Windows system directory"
+    IDC_WORKING             "A dummy working directory created for this program, which is set to be the current working directory"
+    IDC_APPDIR              "A dummy directory set up so the HKLM\\...\\App Dir can be pointed to it"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LINE                "---------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+    IDS_SET_SAFEDLLSEARCHMODE "Set SafeDllSearchMode=%d"
+    IDS_REGISTRY_LOAD_WITH_ALTERED_SEARCH_PATH "LOAD_WITH_ALTERED_SEARCH_PATH"
+    IDS_REGISTRY_LOADTYPE   "LoadType"
+    IDS_ENUM_FAILED         "Failed to enumerate modules"
+    IDS_MODULE_LIST         "*****MODULE LIST*****"
+    IDS_COPY_TARGET_WORKED  "Installed DLL in ""%s"""
+    IDS_BAD_MODULE_HANDLE   "Error for handle 0x%0p"
+    IDS_KNOWN_DLLS          "***** Known DLLs*****"
+    IDS_KNOWN_DLL           "%s ==> %s"
+    IDS_KNOWN_DLL_FAILURE   "Failed to load value for key ""%s"""
+    IDS_APPPATH_FAILED      "Unable to register HKLM\\%s = (default) ""%s"""
+    IDS_APPPATH_SET         "HKLM\\%s = (default) REG_SZ: ""%s"""
+    IDS_APPPATH_NOT_DELETED "Unable to delete App Path key ""HKLM\\%s"""
+    IDS_APPPATH_DELETED     "Successfully removed existing ""HKLM\\%s"""
+    IDS_APPPATH_PATH_FAILED "Failed to set HKLMsath"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_APPPATH_PATH_SET    "HKLM\\%s\\Path = REG_SZ: ""%s"""
+    IDS_RELAUNCH_FAILED     "Re-launch of ""%s"" failed"
+    IDS_INITIAL_APP_PATH    "Found App Path: HKLM\\%s\\Path = REG_SZ: ""%s"""
+    IDS_NO_INITIAL_APP_PATH "No initial App Path: HKLM\\%s\\Path"
+    IDS_RELAUNCH_REQUIRED   "AppPath will not be seen until Relaunch is performed"
+    IDS_REGISTRY_RELAUNCH   "Relaunch"
+    IDS_REGISTRY_WINDOWPLACEMENT "WindowPlacement"
+    IDS_SOURCE_ERROR        "No source"
+    IDS_TARGET_ERROR        "Error"
+    IDS_SOURCE_SAME         "Already there"
+    IDS_COPY_ERROR          "Copy error"
+    IDS_COPY_OK             "Installed"
+    IDS_ALREADY_DELETED     "Already gone"
+    IDS_DELETE_FAILED2      "Delete failed"
+    IDS_DELETE_OK           "Deleted"
+    IDS_REGISTRY_DLL_SELECTION "DLL Selection"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REGISTRY_KNOWN_DLL  "Known DLL"
+    IDS_SYSTEM32_PRESENT    "Known DLL"
+    IDS_GET_ATTRIBUTES_FAILED 
+                            "Attempt to read file attributes for ""%s"" failed"
+    IDS_SET_ATTRIBUTES_FAILED 
+                            "Attempt to set file attributes for ""%s"" failed"
+    IDS_REGISTRY_SYSTEM     "System"
+    IDS_SETDLLDIRECTORY     "SetDllDirectory(_T(""%s""))"
+    IDS_SETDLLDIRECTORY_NULL "SetDllDirectory(NULL)"
+    IDS_SETDLLDIRECTORY_FAILED "SetDllDirectory(_T(""%s"")) falied"
+    IDS_NO_LOCAL_FOUND      ".local redirection name ""%s"" did not exist"
+    IDS_LOCAL_IS_FILE       "%s is a file"
+    IDS_LOCAL_FILENAME_DELETE_FAILED "Delete of directory""%s"" failed"
+    IDS_LOCAL_FILENAME_DELETE_SUCCEEDED "Redirection directory ""%s"" deleted"
+    IDS_LOCAL_DIRECTORY_EMPTY "Redirection directory ""%s"" has no files"
+    IDS_LOCAL_DIRECTORY_DELETE_FAILED "Delete of directory ""%s"" failed"
+    IDS_LOCAL_DIRECTORY_DELETED "Deleted directory ""%s"""
+    IDS_LOCAL_IS_DIRECTORY  "Redirection is via directory ""%s"""
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOCAL_FILE_DELETE_FAILED "Failed to delete redirection file ""%s"""
+    IDS_LOCAL_FILE_DELETED  "Deleted redirection file ""%s"""
+    IDS_CREATE_REDIRECT_FILE_FAILED "Failed to create redirection file ""%s"""
+    IDS_CREATE_REDIRECT_FILE "Created redirection file ""%s"""
+    IDS_REDIRECTION_DIRECTORY_FAILED 
+                            "Creation of redirection directory ""%s"" failed"
+    IDS_REDIRECTION_DIRECTORY_EXISTS 
+                            "Redirection directory ""%s"" already exists"
+    IDS_REDIRECTION_DIRECTORY_WRONG 
+                            "Redirection to directory ""%s"": name exists but is not a directory"
+    IDS_INSTALL_REDIRECTED_DLL_FAILED 
+                            "Failed to install DLL on .local directory ""%s"""
+    IDS_REGISTRY_REDIRECTION "Redirection"
+    IDS_DIRECTORY_IN_LOCAL  "UNSUPPORTED!  Directory in .local directory: ""%s\\%s"""
+    IDS_PROCESS_TERMINATED_OK "Process %p terminated successfully"
+    IDS_PROCESS_TERMINATED_BADLY "Process %p terminated with exit code %d"
+    IDS_LAUNCH_FAILED       "Attempt to launch ""%s"" failed"
+    IDS_BAD_SIGNATURE       "WM_COPYDATA received with bad signature (probably ill-behaved application in system)"
+    IDS_PROCESS_LOADED      "Implicity dynamic linking loaded DLL ""%s"""
+    IDS_PROCESS_ERROR       "Process failed, GetLastError reported error below"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REGISTRY_TEST_SAFE_DLL_SEARCH_MODE "Test SafeDllSearchMode"
+    IDS_ERROR_GETTING_EXE_DATE 
+                            "Unable to open executable ""%s"" to read timestamp"
+    IDS_NO_DLL_FOUND        "Working copy ""%s"" does not exist"
+    IDS_DLL_CURRENT         "The working DLL copy ""%s"" is the most recent copy"
+    IDS_DLL_RESOURCE_FAILURE "FindResource failure for DLL resource"
+    IDS_DLL_RESOURCE_ZERO_SIZE "DLL resource has size ZERO!!!"
+    IDS_DLL_RESOURCE_LOAD_FAILED "Load of DLL resource failed"
+    IDS_DLL_LOCK_FAILED     "Failed to lock DLL resource (LockResource failure)"
+    IDS_DLL_CREATE_FAILED   "Unable to create working copy of DLL ""%s"""
+    IDS_ERROR_WRITING_DLL   "Error writing working copy ""%s"" to disk"
+    IDS_DLL_EXTRACTED       "Successfully extracted working copy of the DLL to ""%s"""
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\LoadLibraryExplorer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
